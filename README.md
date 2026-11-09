@@ -14,24 +14,24 @@ This is a PostgreSQL case study that turns raw sales records from a Kenyan elect
 ---
 
 ## Table of Contents
-1. [About the Company]
-2. [The Problem]
-3. [What This Project Sets Out to Do]
-4. [Tech Stack]
-5. [Data Model]
-6. [SQL Skills Covered]
-7. [How the Numbers Are Calculated]
-8. [Results]
-9. [Repository Contents]
-10. [Final Thoughts]
+1. About the Company
+2. The Problem
+3. What This Project Opts to Do
+4. Tools Used
+5. Data Model
+6. SQL Skills Covered
+7. Performance Measures
+8. Results and Findings
+9. Repository Contents
+10. Conclusion
 
 ---
 
-## About the Company
+## 1. About the Company
 Duka Smart Electronics, a Kenyan electronics retailer with branches in ten towns is the subject of this report. It looks at how customers spend, how they can be grouped, which products and categories perform best, why orders get cancelled, and which customers have gone quiet with the aim of showing where the business makes its money and where it is vulnerable.
 
 
-## The Problem
+## 2. The Problem
 As the retailer expands, the company needs a dependable view of who its best customers are, which products earn the most and where money is being lost. Without a structured analysis, it is hard to:
 
 - spot the customers who bring in the most revenue
@@ -41,7 +41,7 @@ As the retailer expands, the company needs a dependable view of who its best cus
 
 This project answers those questions with SQL and closes with recommendations management can act on.
 
-## What This Project Sets Out to Do
+## 3. What This Project Opts to Do
 - - Calculate the share of orders that end in cancellation.
 - Find the products that earn the most revenue.
 - Compare revenue, cost, profit and margin across product categories.
@@ -52,7 +52,7 @@ This project answers those questions with SQL and closes with recommendations ma
 - Use advanced SQL features to answer the harder business questions.
 - Turn the findings into practical advice for management.
 
-## Tech Stack
+## 4. Tools Used
 
 | Tool | Role |
 |---|---|
@@ -61,7 +61,7 @@ This project answers those questions with SQL and closes with recommendations ma
 | GitHub | Hosting the code and version history |
 | Markdown | Writing up the documentation and insights |
 
-## Data Model
+## 5. Data Model
 
 The project is organized in the `retail_analytics` database under the `public` schema.  There are only two tables that are used in the analysis that is:
       1. `Customers` which holds each customer's ID, name, gender, location, registration_date and segment.
@@ -69,7 +69,7 @@ The project is organized in the `retail_analytics` database under the `public` s
 
 I have included a detailed SQL script named `script.sql` in my GitHub repository, which contains the queries required to create the database and tables, as well as insert the relevant data into the tables.
 
-## SQL Skills Covered
+## 6. SQL Skills Covered
 
 The project works through 46 business questions arranged from easy to difficult.
 
@@ -107,7 +107,7 @@ The project works through 46 business questions arranged from easy to difficult.
 - Customer segmentation
 - A business report aimed at management
 
-## How the Numbers Are Calculated
+## 7. Performance Measures
 
 | Metric | Formula |
 |---|---|
@@ -122,7 +122,7 @@ The project works through 46 business questions arranged from easy to difficult.
 
 **Inactive customers.** A customer's most recent completed order is compared with the most recent order date anywhere in the dataset. If the gap is more than 90 days, the customer is treated as potentially inactive.
 
-## Results
+## 8. Results and Findings
 
 ### Customers
 - Brian Chebet was the highest spender having spent ksh 848,118 total worth of completed orders revenue.
@@ -150,14 +150,14 @@ The project works through 46 business questions arranged from easy to difficult.
 ### Orders Cancellation
 - 90 of 800 orders were cancelled giving a cancellation rate of 11.25%.
 
-## Repository Contents
+## 9. Repository Contents
 
 - `README.md` - what the project is, how to set it up, how to run your queries
 - `schema.sql` - containing the create table statements
 - `queries.sql`- with all business questions and their queries
 - `insights.md` - detailed findings and  recommendations
--  `screenshots` - 1 page dashboard
+-  `screenshots` - 1 page dashboard, three queries sample
 
-## Final Thoughts
+## 10. Conclusion
 
 This project shows how PostgreSQL can be used to solve real retail problems. It starts with simple queries and aggregations, then moves on to joins, CTEs, subqueries, window functions and reusable database objects. Along the way, raw transactions become insights about customer value, product performance, profitability and cancellations that management can use to make decisions.
